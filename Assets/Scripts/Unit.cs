@@ -8,19 +8,9 @@ public class Unit : MonoBehaviour {
     public FireType fireType;
     public ArmorType armorType;
 
-    public int health, maxMovement, lineOfSight;
+    public int health, damage, maxMovement, lineOfSight;
 
     public SpriteRenderer spriteRenderer;
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
 
 public enum MovementType { foot, wheel, fly };

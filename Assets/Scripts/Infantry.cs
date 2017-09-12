@@ -13,12 +13,18 @@ public class Infantry : Unit {
         health = 5;
         maxMovement = 3;
         lineOfSight = 4;
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = Resources.Load("Sprites/Units_0", typeof(Sprite)) as Sprite;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Capture")
+        {
+            print(gameObject.name + "wins");
+        }
+    }
 }
